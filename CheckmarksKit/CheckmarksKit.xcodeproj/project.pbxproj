@@ -19,6 +19,7 @@
 		2295E9A120F799CB002D4562 /* UpdateNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E9A020F799CB002D4562 /* UpdateNotificationTests.swift */; };
 		2295E9A320F7E732002D4562 /* TransactionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E9A220F7E732002D4562 /* TransactionRecorder.swift */; };
 		2295E9A620F7EC4A002D4562 /* TransactionReplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E9A520F7EC4A002D4562 /* TransactionReplayTests.swift */; };
+		2295E9A820F7F401002D4562 /* Pseudoclient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E9A720F7F401002D4562 /* Pseudoclient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2295E9A020F799CB002D4562 /* UpdateNotificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNotificationTests.swift; sourceTree = "<group>"; };
 		2295E9A220F7E732002D4562 /* TransactionRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRecorder.swift; sourceTree = "<group>"; };
 		2295E9A520F7EC4A002D4562 /* TransactionReplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionReplayTests.swift; sourceTree = "<group>"; };
+		2295E9A720F7F401002D4562 /* Pseudoclient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pseudoclient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				2295E9A220F7E732002D4562 /* TransactionRecorder.swift */,
+				2295E9A720F7F401002D4562 /* Pseudoclient.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				2295E9A620F7EC4A002D4562 /* TransactionReplayTests.swift in Sources */,
 				2295E9A120F799CB002D4562 /* UpdateNotificationTests.swift in Sources */,
 				2295E99D20F5B2FC002D4562 /* TransactionTests.swift in Sources */,
+				2295E9A820F7F401002D4562 /* Pseudoclient.swift in Sources */,
 				2295E99F20F6D786002D4562 /* DatabaseOwningTestCase.swift in Sources */,
 				2295E9A320F7E732002D4562 /* TransactionRecorder.swift in Sources */,
 				223F716E20F4FAE600E70A28 /* TransactionOrderingTests.swift in Sources */,
