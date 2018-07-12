@@ -17,6 +17,7 @@
 		2295E99D20F5B2FC002D4562 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E99C20F5B2FC002D4562 /* TransactionTests.swift */; };
 		2295E99F20F6D786002D4562 /* DatabaseOwningTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E99E20F6D786002D4562 /* DatabaseOwningTestCase.swift */; };
 		2295E9A120F799CB002D4562 /* UpdateNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E9A020F799CB002D4562 /* UpdateNotificationTests.swift */; };
+		2295E9A320F7E732002D4562 /* TransactionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E9A220F7E732002D4562 /* TransactionRecorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		2295E99C20F5B2FC002D4562 /* TransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
 		2295E99E20F6D786002D4562 /* DatabaseOwningTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseOwningTestCase.swift; sourceTree = "<group>"; };
 		2295E9A020F799CB002D4562 /* UpdateNotificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNotificationTests.swift; sourceTree = "<group>"; };
+		2295E9A220F7E732002D4562 /* TransactionRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRecorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		223F716C20F4FAE600E70A28 /* CheckmarksKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				2295E9A420F7E73B002D4562 /* Helpers */,
 				2295E99E20F6D786002D4562 /* DatabaseOwningTestCase.swift */,
 				2295E9A020F799CB002D4562 /* UpdateNotificationTests.swift */,
 				2295E99B20F5B2EE002D4562 /* TransactionTests */,
@@ -113,6 +116,14 @@
 				2295E99920F5AF30002D4562 /* TailTransactionTests.swift */,
 			);
 			path = TransactionTests;
+			sourceTree = "<group>";
+		};
+		2295E9A420F7E73B002D4562 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2295E9A220F7E732002D4562 /* TransactionRecorder.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +249,7 @@
 				2295E9A120F799CB002D4562 /* UpdateNotificationTests.swift in Sources */,
 				2295E99D20F5B2FC002D4562 /* TransactionTests.swift in Sources */,
 				2295E99F20F6D786002D4562 /* DatabaseOwningTestCase.swift in Sources */,
+				2295E9A320F7E732002D4562 /* TransactionRecorder.swift in Sources */,
 				223F716E20F4FAE600E70A28 /* TransactionOrderingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
