@@ -11,33 +11,24 @@ import XCTest
 
 class UpdateNotificationTests: DatabaseOwningTestCase {
     
-    private var notified: Bool = false
-    
-    override func setUp() {
-        super.setUp()
-        notified = false
-    }
-    
     func testTaskCreationNotification() {
+        let expectation = taskCreationExpectation()
         XCTAssertNoThrow(try dataStore.addTask())
-        XCTAssertTrue(notified)
+        wait(for: [expectation], timeout: 1)
     }
     
     func testTaskEditNotification() {
+        let task: Task
         do {
-            let task = try dataStore.addTask()
-            notified = false
-            
-            task.name = "Updated name"
-            XCTAssertTrue(notified)
+            task = try dataStore.addTask()
         } catch let e {
             XCTFail(e.localizedDescription)
+            return
         }
-    }
-    
-    override func dataStore(_ dataStore: DataStore, didUpdateTasks tasks: Set<Task>) {
-        super.dataStore(dataStore, didUpdateTasks: tasks)
-        notified = true
+
+        let expectation = taskUpdateExpectation(identifier: task.identifier)
+        task.name = "Updated name"
+        wait(for: [expectation], timeout: 1)
     }
     
 }
