@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate: DataStoreOwner {
-    func tasksDidUpdate(_ tasks: Set<Task>) {
+    func dataStore(_ dataStore: DataStore, didUpdateTasks tasks: Set<Task>) {
         // nothing
     }
 }

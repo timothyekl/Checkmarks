@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol DataStoreOwner: class {
-    func tasksDidUpdate(_ tasks: Set<Task>)
+    func dataStore(_ dataStore: DataStore, didUpdateTasks tasks: Set<Task>)
 }
 
 public class DataStore: NSObject {
@@ -48,7 +48,7 @@ public class DataStore: NSObject {
         
         tasks[identifier] = task
         recentlyChanged.insert(task)
-        owner?.tasksDidUpdate([task])
+        owner?.dataStore(self, didUpdateTasks: [task])
         
         return task
     }
@@ -66,7 +66,7 @@ public class DataStore: NSObject {
     
     func recordChange(to task: Task) {
         recentlyChanged.insert(task)
-        owner?.tasksDidUpdate([task])
+        owner?.dataStore(self, didUpdateTasks: [task])
     }
     
     private func applyChanges(from transaction: Transaction) -> Set<Task> {
