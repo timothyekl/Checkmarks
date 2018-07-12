@@ -40,5 +40,9 @@ extension AppDelegate: DataStoreOwner {
     func dataStore(_ dataStore: DataStore, didUpdateTasks tasks: Set<Task>) {
         // nothing
     }
+    
+    func dataStoreDidIncorporateTransactions(_ dataStore: DataStore) {
+        assertionFailure("The app layer doesn't support sync; how is it incorporating transactions?")
+    }
 }
 

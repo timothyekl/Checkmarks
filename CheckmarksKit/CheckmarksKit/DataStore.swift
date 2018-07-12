@@ -10,6 +10,7 @@ import UIKit
 
 public protocol DataStoreOwner: class {
     func dataStore(_ dataStore: DataStore, didUpdateTasks tasks: Set<Task>)
+    func dataStoreDidIncorporateTransactions(_ dataStore: DataStore)
 }
 
 public class DataStore: NSObject {
@@ -27,6 +28,10 @@ public class DataStore: NSObject {
     
     private weak var owner: DataStoreOwner?
     
+    public var url: URL {
+        return graph.url
+    }
+    
     public init(url: URL, owner: DataStoreOwner) throws {
         self.graph = try TransactionGraph(url: url)
         
@@ -36,10 +41,7 @@ public class DataStore: NSObject {
         super.init()
         
         // Throw away the updates on init? Seems unlikely the owner will care this early
-        let _ = graph.orderedTransactions.reduce(Set<Task>()) { (alreadyUpdated, transaction) -> Set<Task> in
-            let transactionUpdated = applyChanges(from: transaction)
-            return alreadyUpdated.union(transactionUpdated)
-        }
+        let _ = applyAllChanges(from: graph.orderedTransactions)
     }
     
     public func addTask() throws -> Task {
@@ -67,6 +69,22 @@ public class DataStore: NSObject {
     func recordChange(to task: Task) {
         recentlyChanged.insert(task)
         owner?.dataStore(self, didUpdateTasks: [task])
+    }
+    
+    func incorporateTransactions() throws {
+        let url = graph.url
+        self.tasks = [:]
+        self.graph = try TransactionGraph(url: url)
+        
+        let _ = applyAllChanges(from: graph.orderedTransactions)
+        owner?.dataStoreDidIncorporateTransactions(self)
+    }
+    
+    private func applyAllChanges(from transactions: [Transaction]) -> Set<Task> {
+        return transactions.reduce(Set<Task>()) { (alreadyUpdated, transaction) -> Set<Task> in
+            let transactionUpdated = applyChanges(from: transaction)
+            return alreadyUpdated.union(transactionUpdated)
+        }
     }
     
     private func applyChanges(from transaction: Transaction) -> Set<Task> {
