@@ -18,6 +18,7 @@
 		2295E99F20F6D786002D4562 /* DatabaseOwningTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E99E20F6D786002D4562 /* DatabaseOwningTestCase.swift */; };
 		2295E9A120F799CB002D4562 /* UpdateNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E9A020F799CB002D4562 /* UpdateNotificationTests.swift */; };
 		2295E9A320F7E732002D4562 /* TransactionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E9A220F7E732002D4562 /* TransactionRecorder.swift */; };
+		2295E9A620F7EC4A002D4562 /* TransactionReplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E9A520F7EC4A002D4562 /* TransactionReplayTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		2295E99E20F6D786002D4562 /* DatabaseOwningTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseOwningTestCase.swift; sourceTree = "<group>"; };
 		2295E9A020F799CB002D4562 /* UpdateNotificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNotificationTests.swift; sourceTree = "<group>"; };
 		2295E9A220F7E732002D4562 /* TransactionRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRecorder.swift; sourceTree = "<group>"; };
+		2295E9A520F7EC4A002D4562 /* TransactionReplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionReplayTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				2295E9A420F7E73B002D4562 /* Helpers */,
 				2295E99E20F6D786002D4562 /* DatabaseOwningTestCase.swift */,
 				2295E9A020F799CB002D4562 /* UpdateNotificationTests.swift */,
+				2295E9A520F7EC4A002D4562 /* TransactionReplayTests.swift */,
 				2295E99B20F5B2EE002D4562 /* TransactionTests */,
 				223F716F20F4FAE600E70A28 /* Info.plist */,
 			);
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2295E99A20F5AF30002D4562 /* TailTransactionTests.swift in Sources */,
+				2295E9A620F7EC4A002D4562 /* TransactionReplayTests.swift in Sources */,
 				2295E9A120F799CB002D4562 /* UpdateNotificationTests.swift in Sources */,
 				2295E99D20F5B2FC002D4562 /* TransactionTests.swift in Sources */,
 				2295E99F20F6D786002D4562 /* DatabaseOwningTestCase.swift in Sources */,
