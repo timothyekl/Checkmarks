@@ -20,6 +20,7 @@
 		2295E9A320F7E732002D4562 /* TransactionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E9A220F7E732002D4562 /* TransactionRecorder.swift */; };
 		2295E9A620F7EC4A002D4562 /* TransactionReplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E9A520F7EC4A002D4562 /* TransactionReplayTests.swift */; };
 		2295E9A820F7F401002D4562 /* Pseudoclient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E9A720F7F401002D4562 /* Pseudoclient.swift */; };
+		2295E9AA20F7FCC5002D4562 /* SyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295E9A920F7FCC5002D4562 /* SyncTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2295E9A220F7E732002D4562 /* TransactionRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRecorder.swift; sourceTree = "<group>"; };
 		2295E9A520F7EC4A002D4562 /* TransactionReplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionReplayTests.swift; sourceTree = "<group>"; };
 		2295E9A720F7F401002D4562 /* Pseudoclient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pseudoclient.swift; sourceTree = "<group>"; };
+		2295E9A920F7FCC5002D4562 /* SyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				2295E99E20F6D786002D4562 /* DatabaseOwningTestCase.swift */,
 				2295E9A020F799CB002D4562 /* UpdateNotificationTests.swift */,
 				2295E9A520F7EC4A002D4562 /* TransactionReplayTests.swift */,
+				2295E9A920F7FCC5002D4562 /* SyncTests.swift */,
 				2295E99B20F5B2EE002D4562 /* TransactionTests */,
 				223F716F20F4FAE600E70A28 /* Info.plist */,
 			);
@@ -259,6 +262,7 @@
 				2295E99F20F6D786002D4562 /* DatabaseOwningTestCase.swift in Sources */,
 				2295E9A320F7E732002D4562 /* TransactionRecorder.swift in Sources */,
 				223F716E20F4FAE600E70A28 /* TransactionOrderingTests.swift in Sources */,
+				2295E9AA20F7FCC5002D4562 /* SyncTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
